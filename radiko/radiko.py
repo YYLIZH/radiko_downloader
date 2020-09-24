@@ -75,14 +75,14 @@ command="ffmpeg -i "+ "\""+ m3u8 +"\"" +" -c:a libmp3lame " + "\"" + filename + 
 
 
 now=datetime.datetime.now()
-terminate_time = now + datetime.timedelta(seconds=int(terminate_time_delta))
+terminate_time = now + datetime.timedelta(minutes=int(terminate_time_delta))
 
 p = subprocess.Popen(command, shell=True)
 
-'''
+
 while datetime.datetime.now() < terminate_time:
     pass
 p.kill()
-'''
+
 
 
